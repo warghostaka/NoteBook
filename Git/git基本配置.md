@@ -92,29 +92,3 @@ export LC_ALL="zh_CN.UTF-8"
 ```
 
 ![image-20250921213711781](./assets/image-20250921213711781.png)
-
-在PowerShell中查看当前输出编码的变量
-
-```powershell
-[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
-```
-
-> **`[Console]`**
->
-> - 这是 .NET 的 `System.Console` 类，PowerShell 可以直接调用。
-> - 它控制当前控制台的输入输出行为。
->
-> **`OutputEncoding`**
->
-> - 这是 `System.Console` 的一个静态属性，表示 **控制台输出的编码方式**。
-> - 默认情况下，Windows 控制台使用系统代码页（例如简体中文是 **GBK / CP936**）。
-> - 这就导致当 Git 输出 UTF-8 编码的中文时，控制台按 GBK 去解读，结果乱码。
->
-> **`[System.Text.Encoding]::UTF8`**
->
-> - 这是 .NET 框架里表示 UTF-8 编码的对象。
->
-> **整体作用**
->
-> - 把 PowerShell 的 **控制台输出编码** 改为 **UTF-8**。
-> - 这样，当 Git（或其他程序）输出 UTF-8 内容时，PowerShell 会正确解码并显示中文。
