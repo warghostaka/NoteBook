@@ -72,7 +72,7 @@ nvm help 				#查看更多命令
 
 <img src="./assets/image-20250713225337836.png" alt="image-20250713225337836" style="zoom: 80%;" />
 
-再安装一个 **v16.14.0 **用于兼容vue2项目，对应的npm版本为：**8.3.1**
+再安装一个 **v16.14.0 **用于兼容vue2项目，对应的npm版本为**：8.3.1**
 
 <img src="./assets/image-20250713231338818.png" alt="image-20250713231338818" style="zoom:67%;" />
 

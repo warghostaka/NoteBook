@@ -22,13 +22,13 @@
 6. 运行vue项目
 7. 配置VScode相关插件
 
-参考文章：***VS Code上搭建Vue开发环境超详细教程***[link](https://blog.csdn.net/weixin_49136054/article/details/129624923)
+参考文章**：*VS Code上搭建Vue开发环境超详细教程***[link](https://blog.csdn.net/weixin_49136054/article/details/129624923)
 
 ---
 
 ## 2.下载安装node.js
 
-参考文章：***2024最新版Node.js下载安装及环境配置教程【保姆级】***[link](https://blog.csdn.net/WHF__/article/details/129362462)
+参考文章**：*2024最新版Node.js下载安装及环境配置教程【保姆级】***[link](https://blog.csdn.net/WHF__/article/details/129362462)
 
 Node.js的配置曾经出现过不少问题，尤其是安装npm以及镜像cnpm时，由于这里已经配置完成因此无法描述当时出现的问题，简单附上相关的命令
 
@@ -74,7 +74,7 @@ cnpm -v
 
 ---
 
-**出现问题：**
+**出现问题**：
 
 用脚手架创建项目时出现：
 

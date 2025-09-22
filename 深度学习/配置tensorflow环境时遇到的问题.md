@@ -31,7 +31,7 @@ Caution: TensorFlow 2.10 was the last TensorFlow release that supported GPU on n
 
 这段话讲的就是tensorflow2.10版本是最后一个在本机Windows上支持GPU的版本。换句话说**如果想在tensorflow框架下在Windows中使用GPU运行程序，最高版本只能安装2.10**
 
-**解决方法：**
+**解决方法**：
 
 首先重新创建一个conda虚拟环境并激活，根据tensorflow官网查询可以使用3.9版本的python环境
 

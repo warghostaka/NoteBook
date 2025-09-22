@@ -29,7 +29,7 @@ npm是Node.js默认的包管理工具，它可以安装、共享、分发代码�
 * 超级可靠。
 * 使用详细、简洁的锁文件格式和明确的安装算法，Yarn 能够保证在不同系统上无差异的工作。
 
-参考文章：***yarn的安装和使用（极其详细）[link](https://blog.csdn.net/LIZHUOLONG1/article/details/125534086)***
+参考文章**：*yarn的安装和使用（极其详细）[link](https://blog.csdn.net/LIZHUOLONG1/article/details/125534086)***
 
 ---
 
