@@ -34,7 +34,7 @@ C:\Users{User}\AppData\Roaming\npm-cache
 
 修改文件`D:\nvm\settings.txt`，新增如下内容：
 
-```txt
+```yaml
 node_mirror: https://npmmirror.com/mirrors/node/
 npm_mirror: https://npmmirror.com/mirrors/npm/
 ```
@@ -43,7 +43,7 @@ npm_mirror: https://npmmirror.com/mirrors/npm/
 
 此时安装完成，使用命令
 
-```powershell
+```shell
 nvm      #查看详细信息
 nvm -v   #查看版本
 ```

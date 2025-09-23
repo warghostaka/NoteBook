@@ -15,7 +15,7 @@
 
 **changOrigin 就是允许跨域,rewrite就是在这个路径上遇到/api的他就会就此路径上的/api替换为空字符串.**
 
-```
+```js
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
@@ -56,7 +56,7 @@ export default defineConfig({
 
 	假设你在前端代码中发起如下请求：
 
-	```
+	```js
 	axios.get('/api/user')
 	  .then(response => {
 	    console.log(response.data);
@@ -74,7 +74,7 @@ export default defineConfig({
 
 我的项目中解决的是接口不同造成的不同源跨域问题，因此直接修改utils/request.js文件中的baseURL，相当于在所有的调用函数前加上前缀`/api`
 
-```
+```js
 import axios from 'axios';
 import useToken from '../stores/token';
 import router from '../router';

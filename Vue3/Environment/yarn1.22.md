@@ -37,13 +37,13 @@ npm是Node.js默认的包管理工具，它可以安装、共享、分发代码�
 
 使用npm命令安装yarn，安装命令如下：
 
-```
+```bash
 npm install yarn -g
 ```
 
 查看版本信息：
 
-```
+```bash
 yarn -v
 ```
 
@@ -55,17 +55,17 @@ yarn -v
 
 修改yarn下载源为国内镜像
 
-```
+```bash
 yarn config set registry https://registry.npmmirror.com
 ```
 
 验证
 
-```
+```bash
 yarn config get registry
 ```
 
-![image-20250102170652353](D:\Workspace\NoteBook\VueNote\Environment\assets\image-20250102170652353.png)
+![image-20250102170652353](.\assets\image-20250102170652353.png)
 
 ---
 

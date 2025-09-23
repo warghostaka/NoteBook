@@ -18,7 +18,7 @@
 
 在 Anaconda Prompt 中输入验证命令：
 
-```
+```bash
 conda -V
 ```
 
@@ -32,7 +32,7 @@ conda -V
 
 在`C:\Users\WarghostAKA\.condarc`添加内容：
 
-```
+```yaml
 envs_dirs:
   - D:\Anaconda3\envs
 pkgs_dirs:
@@ -47,37 +47,37 @@ pkgs_dirs:
 
 使用Anaconda Prompt 相关命令来创建conda虚拟环境，这里以我 ml-env 的虚拟环境为例
 
-```
+```shell
 conda create -n ml-env python=3.9
 ```
 
 然后激活并切换到这个虚拟环境
 
-```
+```shell
 conda activate ml-env
 ```
 
 使用 conda install 命令下载需要的软件包
 
-```
+```shell
 conda install numpy pandas scikit-learn matplotlib scipy
 ```
 
 使用 conda install 命令安装 torch（CPU）
 
-```
+```shell
 conda install pytorch torchvision torchaudio cpuonly -c pytorch
 ```
 
 可以使用命令来退出虚拟环境
 
-```
+```shell
 conda deactivate
 ```
 
 如果下载出现问题可以删除环境
 
-```
+```shell
 conda env remove --name ml-env
 ```
 
@@ -85,7 +85,7 @@ conda env remove --name ml-env
 
 以 pyqt5 下载为例（conda 中部分包名和pip下载时不一样，例如conda install 没有 pyqt-tools 包，还有就是下载pyqt5时需要指定版本5.15，不然默认下载pyqt6）
 
-```
+```shell
 pip install PyQt5 pyqt-tools -i https://pypi.tuna.tsinghua.edu.cn/simple/
 ```
 
@@ -101,7 +101,7 @@ pip install PyQt5 pyqt-tools -i https://pypi.tuna.tsinghua.edu.cn/simple/
 
 修改powershell的安全策略，在powershell管理员模式下输入
 
-```
+```shell
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 ```
 
@@ -111,25 +111,25 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 
 输入命令查看当前执行策略
 
-```
+```shell
 Get-ExecutionPolicy -List
 ```
 
 发现CurrentUser 的执行策略为 Bypass，使用修改为RemoteSigned
 
-```
+```shell
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
 
 在`PoweShell`管理员模式下输入以下命令，安装`PSCondaEnvs`包:
 
-```
+```shell
 conda init powershell
 ```
 
 上述操作完成后，每次打开`PowerShell`都会自动切换到`base`环境下，若想关闭可使用以下命令：
 
-```
+```shell
 # 关闭
 conda config --set auto_activate_base false
 # 开启

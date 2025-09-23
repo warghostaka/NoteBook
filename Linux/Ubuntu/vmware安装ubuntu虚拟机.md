@@ -74,13 +74,13 @@ Ubuntu 从 20.04 开始安装时就提供了一个选项：
 
 安装命令
 
-```shell
-$ sudo apt-get install language-pack-zh-hans
+```bash
+sudo apt-get install language-pack-zh-hans
 ```
 
 然后添加中文支持
 
-```shell
+```bash
 sudo locale-gen zh_CN.UTF-8
 ```
 

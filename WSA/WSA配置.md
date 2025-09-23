@@ -78,7 +78,7 @@ WSA工具箱中似乎不包含adb，我的adb.exe位置：C:\platform-tools\adb.
 
 命令 `adb connect 127.0.0.1:58526` 是用于通过 **ADB（Android Debug Bridge）** 连接到 **Windows Subsystem for Android (WSA)** 的步骤之一。以下是对该命令的详细解释以及如何在 PowerShell 中使用它。
 
-```
+```shell
 adb connect 127.0.0.1:58526
 ```
 
@@ -99,13 +99,11 @@ adb connect 127.0.0.1:58526
 
 开启全局代理，在shell中输入 
 
-```
+```shell
 settings put global http_proxy 172.30.0.1:7890
 ```
 
 **clash默认端口7890**
-
-
 
 ### 关于全局代理以及命令
 
@@ -117,7 +115,7 @@ settings put global http_proxy 172.30.0.1:7890
 
 ADB（Android Debug Bridge）是一个用于与Android设备通信的命令行工具。通过ADB，你可以在设备上执行各种操作，包括修改系统设置。
 
-```
+```shell
 adb shell settings put global http_proxy 172.30.0.1:10800
 ```
 
@@ -152,7 +150,7 @@ WSA 默认会继承 Windows 主机的网络配置，包括代理设置。如果�
 
 运行以下命令清除 WSA 的全局代理设置：
 
-```
+```shell
 adb shell settings put global http_proxy :0
 ```
 
@@ -195,8 +193,6 @@ WSA 的网络访问完全依赖于 Windows 主机的网络配置：
 配置完代理之后反而是完全没有网络了，不知道是什么情况，不过在不配置网络的情况下能够使用不背单词（雷电要是能正常使用5.9.4版那就白搞了😭）
 
 但即便是默认情况下，wsa似乎还是无法使用Windows系统中的代理，表现为谷歌搜索无法使用，但可能的原因还有谷歌框架的问题，也许未来可以通过使用当时我配置手机谷歌商店的方法来解决
-
-
 
 ### WSA以后不支持了
 

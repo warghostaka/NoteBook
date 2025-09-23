@@ -34,14 +34,14 @@ Node.js的配置曾经出现过不少问题，尤其是安装npm以及镜像cnpm
 
 - 安装后测试node.js版本，以及自带的npm版本
 
-~~~
+~~~bash
 node -v
 npm -v
 ~~~
 
 - 安装国内镜像cnpm
 
-```
+```bash
 npm install -g cnpm --registry=https://registry.npmmirror.com
 cnpm -v
 ```
@@ -52,19 +52,19 @@ cnpm -v
 
 - 安装vue脚手架，终端命令
 
-	~~~
+	~~~bash
 	cnpm install -g @vue/cli
 	~~~
 
 - 安装成功检验
 
-	~~~
+	~~~bash
 	vue -V
 	~~~
 
 - 使用命令创建vue项目，命令输入后连续2次回车完成默认项目创建，同时可以在键盘上下能够对项目进行配置
 
-	~~~
+	~~~bash
 	vue create vue_project	//项目名称
 	~~~
 
@@ -90,21 +90,21 @@ cnpm -v
 
 - 运行项目
 
-	~~~
+	~~~bash
 	npm run serve
 	~~~
 
 	运行结果：
 
-	![image-20250102103650224](D:\Workspace\NoteBook\VueNote\Environment\assets\image-20250102103650224.png)
+	![image-20250102103650224](./assets/image-20250102103650224.png)
 
 点击`http://localhost:8080/`可以进入Vue的默认界面
 
-![image-20250102103803383](D:\Workspace\NoteBook\VueNote\Environment\assets\image-20250102103803383.png)
+![image-20250102103803383](.\assets\image-20250102103803383.png)
 
 Vue CLI 创建的项目结构如下：
 
-```
+```mathematica
 my-vue-project/
 ├── node_modules/      # 依赖包
 ├── public/            # 静态资源

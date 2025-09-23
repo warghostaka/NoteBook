@@ -14,7 +14,7 @@
 以我要访问的疫情数据 api 为例，原 api  地址：
 `https://api.inews.qq.com/testaxios/newsqa/v1/automation/modules/list?modules=FAutoCountryConfirmAdd,WomWorld,WomAboard`
 
-```
+```js
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 
@@ -46,7 +46,7 @@ export default defineConfig({
 
 ### api / index.js
 
-```
+```js
 import axios from "../utils/requst"     
 // import axios from "axios"
 const api = {
@@ -69,7 +69,7 @@ export default api;
 
 ### utils / requst.js
 
-```
+```js
 import axios from "axios"
 import qs from "querystring"
 
@@ -157,7 +157,7 @@ export default instance
 
 我是在 home.vue 里面调用的，直接 import api 文件以后就可以直接调用函数了
 
-```
+```js
 mounted(){
       api.getNcov().then(res=>{
         console.log(res.data)

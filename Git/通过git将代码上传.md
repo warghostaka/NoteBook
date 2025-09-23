@@ -12,7 +12,7 @@
 
 实例：完成远程仓库的创建
 
-![image-20250102105131627](C:\Users\WarghostAKA\AppData\Roaming\Typora\typora-user-images\image-20250102105131627.png)
+![image-20250102105131627](./assets/image-20250102105131627.png)
 
 随后根据这里的提示创建本地仓库
 

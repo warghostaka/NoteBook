@@ -16,7 +16,7 @@
 
 使用npm或yarn包管理工具都可以搭配Vite手动创建项目，具体命令如下。
 
-```
+```shell
 # 使用npm create命令创建项目
 npm create vite@latest
 # 使用yarn create命令创建项目
@@ -47,7 +47,7 @@ yarn global dir
 
 **查到**
 
-![image-20250102183656499](D:\Workspace\NoteBook\VueNote\Environment\assets\image-20250102183656499.png)
+![image-20250102183656499](.\assets\image-20250102183656499.png)
 
 ### 解决办法
 
@@ -65,15 +65,15 @@ yarn config set cache-folder "D:\Node\node_modules\yarn\cache"
 
 **选择前端框架**
 
-![image-20250102185631792](D:\Workspace\NoteBook\VueNote\Environment\assets\image-20250102185631792.png)
+<img src=".\assets\image-20250102185631792.png" alt="image-20250102185631792" style="zoom:67%;" />
 
 **选择语法类型**
 
-![image-20250102185751110](D:\Workspace\NoteBook\VueNote\Environment\assets\image-20250102185751110.png)
+<img src=".\assets\image-20250102185751110.png" alt="image-20250102185751110" style="zoom: 80%;" />
 
 **现在可以根据提示运行代码**
 
-![image-20250102185835238](D:\Workspace\NoteBook\VueNote\Environment\assets\image-20250102185835238.png)
+![image-20250102185835238](.\assets\image-20250102185835238.png)
 
 上述命令中，yarn dev命令是Vue3项目中package.json文件里面scripts节点配置的命令。除了yarn dev命令外，还有2个常用命令yarn build和yarn preview，它们分别表示构建生产环境项目和构建本地预览环境项目。这3个命令实际上都是别名，是为了便于开发人员记忆。当执行这3个命令时，yarn会读取当前项目的package.json文件中的命令配置，找到真正的命令并执行。
 
@@ -91,9 +91,9 @@ Vue 3项目的`package.json`文件中的命令配置如下
 
 #### 运行项目
 
-![image-20250102190819028](D:\Workspace\NoteBook\VueNote\Environment\assets\image-20250102190819028.png)
+<img src=".\assets\image-20250102190819028.png" alt="image-20250102190819028" style="zoom: 80%;" />
 
-![image-20250102190904856](D:\Workspace\NoteBook\VueNote\Environment\assets\image-20250102190904856.png)
+<img src=".\assets\image-20250102190904856.png" alt="image-20250102190904856" style="zoom: 50%;" />
 
 ---
 
@@ -107,7 +107,7 @@ Vue 3项目的`package.json`文件中的命令配置如下
 
 Vue 3项目创建成功后，使用VS Code编辑器打开项目目录，可以看到一个默认生成的项目目录结构，如右图所示。
 
-<img src="D:\Workspace\NoteBook\VueNote\Environment\assets\image-20250102191944517.png" alt="image-20250102191944517" style="zoom:80%;" />
+![image-20250102191944517](.\assets\image-20250102191944517.png)
 
 下面简要介绍Vue 3项目的目录结构中各个目录和文件的作用，具体如下。
 
