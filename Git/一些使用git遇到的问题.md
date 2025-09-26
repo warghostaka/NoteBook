@@ -46,6 +46,16 @@ git log --author=<作者>
 
 <img src="./assets/image-20250921223932386.png" alt="image-20250921223932386" style="zoom:67%;" />
 
+此外，还能直接把内容导入到文件中进行查看，此时会自动创建对应文件
+
+```shell
+git log --graph branch -- > branch.txt
+```
+
+> git 需要区分分支名和文件名，之间用 `--` 进行分隔
+
+<img src="./assets/image-20250926104229844.png" alt="image-20250926104229844" style="zoom:67%;" />
+
 ## git无关仓库无法合并问题
 
 重构工作区代码时删除了本地仓库，试图重新初始化仓库并与远程仓库合并，因此出现以下错误
@@ -199,3 +209,68 @@ git show 540babc:path > new_path
 ```
 
 不过这种方法返回的文件不会保留原本的目录结构，而是单一文件或者目录直接返回到当前工作区的根目录下
+
+---
+
+## 本地分支和远程分支的删除
+
+通过命令删除本地分支
+
+```shell
+# 分支已被合并，普通删除本地分支
+git branch -d branch
+# 分支未合并，强制删除本地分支
+git branch -D branch
+```
+
+> 删除前需要切换到其他分支
+
+存在这样一个问题，本地分支在合并删除后，远程分支不会被自动删除
+
+通过命令清理远程分支
+
+```shell
+git push origin --delete branch
+```
+
+---
+
+## 创建清除提交记录的孤儿分支
+
+现在想把笔记单独放在一个分支里，并希望这个新分支不包含之前代码的提交记录，可以通过创建孤儿分支解决这个问题
+
+```shell
+# 创建孤儿分支
+git checkout --orphan notes
+# 将当前工作区的文件作为初始提交
+git add .
+git commit -m "初始提交"
+```
+
+如果已经有了一个包含提交的新分支，可以用孤儿分支替代这个分支
+
+```shell
+git branch -M notes_clean notes
+```
+
+> `-M` 是 `--move --force` 的简写，相当于重命名分支，覆盖掉原来的 `notes`
+
+---
+
+## 拉取远程创建的新分支
+
+由于 `pull` 只作用于当前分支而无法拉取远程新分支，可以使用 `fetch` 来实现远程分支拉取到本地
+
+```shell
+# 把远程所有分支信息拉取到本地
+git fetch origin
+# 查看远程分支
+git branch -r
+```
+
+此时不会自动在本地生成一个同名的工作分支，还需要签出这个新分支，并跟踪远程
+
+```shell
+git checkout -b notes origin/notes
+```
+
