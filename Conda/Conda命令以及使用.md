@@ -98,3 +98,20 @@ conda config --remove channels https://mirrors.tuna.tsinghua.edu.cn/tensorflow/l
 ```shell
 conda config --remove-key channels
 ```
+
+---
+
+## 将conda虚拟环境中的依赖导出
+
+conda官方推荐导出为 `environment.yml`
+
+```bash
+conda env export > environment.yml
+```
+
+一般还需要将pip安装的依赖导出为 `requirements.txt`
+
+```bash
+pip freeze > requirements.txt
+```
+
